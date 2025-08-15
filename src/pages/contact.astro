@@ -1,0 +1,37 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout>
+	<!-- Contact Page Header -->
+	<section class="bg-gray-400 p-8 text-center">
+		<h1 class="text-3xl font-bold mb-4">Contact Us</h1>
+		<p>We'd love to hear from you. Fill out the form below to get in touch.</p>
+	</section>
+
+	<!-- Contact Form Section -->
+	<section class="bg-white p-8 max-w-6xl mx-auto">
+		<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+			<div class="bg-yellow-200 p-4 text-center">
+				Some address info, email, and phone here
+			</div>
+			<form class="space-y-6">
+				<div>
+					<label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+					<input required type="text" id="name" name="name" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md focus:ring focus:ring-blue-200" />
+				</div>
+				<div>
+					<label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+					<input required type="email" id="email" name="email" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md focus:ring focus:ring-blue-200" />
+				</div>
+				<div>
+					<label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+					<textarea required id="message" name="message" rows="5" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md focus:ring focus:ring-blue-200"></textarea>
+				</div>
+				<button type="submit" class="px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">
+					Send Message
+				</button>
+			</form>
+		</div>
+	</section>
+</Layout>

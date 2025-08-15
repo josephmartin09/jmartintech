@@ -10,7 +10,7 @@ import '../styles/global.css';
 		<meta name="generator" content={Astro.generator} />
 		<title>Astro Basics</title>
 	</head>
-	<body class="min-h-screen bg-white text-black">
+	<body class="min-h-screen flex flex-col bg-white text-black">
 
 		<!-- Nav -->
 		<nav class="sticky top-0 z-50 bg-gray-800 text-white p-6">
@@ -19,13 +19,15 @@ import '../styles/global.css';
 				<div>
 				<a href="/" class="px-3 hover:underline">Home</a>
 				<a href="/about" class="px-3 hover:underline">About</a>
-				<a href="#" class="px-3 hover:underline">Contact</a>
+				<a href="/contact" class="px-3 hover:underline">Contact</a>
 				</div>
 			</div>
 		</nav>
 	
 		<!-- Slot for page -->
-		<slot />
+		<main class="flex-grow">
+			<slot />
+		</main>
 
 		<!-- Footer -->
 		<footer class="bg-gray-800 text-white p-6 mt-12">
