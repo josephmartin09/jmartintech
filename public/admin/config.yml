@@ -1,8 +1,8 @@
+media_folder: "src/assets/" # Location where files will be stored in the repo
+public_folder: "src/assets/" # The src attribute for uploaded media
 backend:
   name: github
   repo: josephmartin09/jmartintech
-media_folder: "src/assets/" # Location where files will be stored in the repo
-public_folder: "src/assets/" # The src attribute for uploaded media
 collections:
   - name: "blog" # Used in routes, e.g., /admin/collections/blog
     label: "Blog" # Used in the UI
