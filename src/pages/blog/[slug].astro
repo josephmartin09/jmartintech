@@ -1,8 +1,10 @@
 ---
-import { getCollection } from 'astro:content';
+import { getEntryBySlug, getCollection} from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
 import BlogLayout from '../../layouts/BlogLayout.astro';
 
+// Tell Astro which links exist: in this case its one post per 
+// markdown file in content/blog
 export async function getStaticPaths() {
   const posts = await getCollection('blog');
   return posts.map(post => ({
@@ -11,10 +13,8 @@ export async function getStaticPaths() {
 }
 
 const { slug } = Astro.params;
-const posts = await getCollection('blog');
-const post = posts.find(p => p.slug === slug);
-if (!post) throw new Error(`Post not found for slug: ${slug}`);
-const { Content, head } = await post.render();
+const post = await getEntryBySlug('blog', slug)
+const { Content, head } = await post.render(); // TODO: head is useful for SEO
 ---
 
 <Layout>
