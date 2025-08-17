@@ -18,7 +18,7 @@ const { Content, head } = await post.render(); // TODO: head is useful for SEO
 ---
 
 <Layout>
-  <BlogLayout title={post.data.title} date={post.data.date} author={post.data.author}>
+  <BlogLayout {...post.data}>
     <Content />
   </BlogLayout>
 </BaseLayout>
